@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.car" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+
+        <activity
+            android:name="com.initialsetup.VroomCarLoginScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomCarSearchRideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.initialsetup.VroomCarLandingScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomViewDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomProfileDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomOfferRideScreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomCarEditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomCarUpdateInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.initialsetup.VroomCarUpdateProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+
+
+        <!-- ************************ LeftMenu Activities *************************** -->
+
+        <activity
+            android:name="com.initialsetup.VroomCarChooseOption"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- **************** Related to facebook ********************** -->
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+     <!--   <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider1601560913447509"
+            android:exported="true" />
+-->
+
+    </application>
+
+</manifest>

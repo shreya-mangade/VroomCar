@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "609420882907",
+    "firebase_url": "https://vroomcarstudent.firebaseio.com",
+    "project_id": "vroomcarstudent",
+    "storage_bucket": "vroomcarstudent.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609420882907:android:3be653664c6b2c1c",
+        "android_client_info": {
+          "package_name": "com.car"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609420882907-d4smeh04g2lr7dbtg5if784rvk1vv2cs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkaEicGYAq-U6WI_uvT0HUYiuBxTAsDgw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

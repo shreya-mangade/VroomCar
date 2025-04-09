@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="60dp"
+            android:src="@drawable/image"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:text="10:10 AM"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:text="Brunch Hadyan"
+            android:layout_width="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/img_profile"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_profile"
+            android:layout_toLeftOf="@+id/right_arrow"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                android:text="London to Paris"
+                android:layout_marginTop="5dp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_route" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_home_pickup"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Home PickUp"
+            android:checked="false"
+            android:layout_toRightOf="@+id/tv_price"
+            android:textSize="12sp"
+            android:textColor="@color/orange"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="7dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/img_profile"
+            android:text="Price(INR)-200"
+            android:checked="false"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/green"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="7dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="wrap_content"
+            android:text="10 Aug 2015"
+            android:textSize="14sp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_profile"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentBottom="true"
+            android:layout_height="1dp" />
+
+        <ImageView
+            android:id="@+id/right_arrow"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VroomCar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="terms">Terms &amp; Conditions</string>
+    <string name="app_id">415109365523575</string>
+
+    <string name="content">Put all your designs here</string>
+    <string name="hide">Hide Sliding Up Layout</string>
+    <string name="show">Show Sliding Up Layout</string>
+    <string name="slide">This is a simple Sliding Up Layout</string>
+
+
+
+
+
+</resources>

@@ -1,0 +1,671 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="@color/gray"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel_data_container"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp">
+
+
+            <ImageView
+                android:id="@+id/img_header"
+                android:layout_width="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/top_bg_new"
+                android:layout_height="140dp" />
+
+
+            <TextView
+                android:id="@+id/tv_header_text"
+                android:layout_width="wrap_content"
+                android:text="PUNE TO MUMBAI"
+                android:layout_centerInParent="true"
+                android:textSize="22sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingTop="25dp"
+                android:textColor="@color/gray"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btnRideUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_marginTop="-40dp"
+                android:visibility="invisible"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:id="@+id/img_profile_bg"
+                    android:layout_width="72dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/date_dot_bg"
+
+                    android:layout_height="72dp" />
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/img_profile_user"
+                    android:src="@drawable/profile_placeholder"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_rider_name"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+
+                android:background="@drawable/moments_addpost_date_bg"
+                android:text="Brunch Hadyan" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="false"
+            android:layout_above="@+id/llBookRide"
+            android:layout_below="@+id/rel_data_container"
+            android:id="@+id/scroll_view">
+
+
+            <RelativeLayout
+                android:id="@+id/rel_image"
+                android:layout_width="fill_parent"
+                android:paddingBottom="15dp"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_date"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:text="Date of Journey"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="fill_parent"
+                        android:text="17/07/2015"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:background="@drawable/textview_bg"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_time"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ll_date"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:text="Time of Journey"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:padding="5dp"
+                        android:layout_width="fill_parent"
+                        android:text="10:45 AM"
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/textview_bg"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_vehical_number"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ll_time"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:text="Vehicle Number"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_car_number"
+                        android:layout_width="fill_parent"
+                        android:text=""
+                        android:textSize="20sp"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:background="@drawable/textview_bg"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_travel_details"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/ll_vehical_number"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/ll_vehical_type"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:text="Vehicle Type"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_vehicle_type"
+                            android:layout_width="fill_parent"
+                            android:text="BMW X5"
+                            android:textSize="20sp"
+                            android:layout_marginTop="5dp"
+                            android:padding="5dp"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:background="@drawable/textview_bg"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_seats"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_below="@+id/ll_travel_details"
+                        android:layout_width="fill_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:text="Seats Available"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tv_seats_available"
+                            android:layout_width="fill_parent"
+                            android:text="03"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20sp"
+                            android:padding="5dp"
+                            android:background="@drawable/textview_bg"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:layout_height="40dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_price"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_below="@id/ll_travel_details"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:text="Cost per Traveller (INR)"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_price_value"
+                        android:layout_width="fill_parent"
+                        android:text="100"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:background="@drawable/textview_bg_orange"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_description"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_below="@id/ll_price"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:text="Ride Description"
+                        android:textColor="@android:color/darker_gray"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tv_description"
+                        android:layout_width="fill_parent"
+                        android:text=""
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textSize="20sp"
+                        android:padding="5dp"
+                        android:background="@drawable/textview_bg"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content" />
+
+                    <CheckBox
+                        android:id="@+id/chkbox_terms_and_conditions"
+                        android:layout_width="wrap_content"
+                        android:text="I agree to all the Terms and Conditions."
+                        android:layout_marginTop="10dp"
+                        android:checked="false"
+                        android:textSize="14sp"
+
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/llBookRide"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_contact"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="VIEW OWNER'S PROFILE"
+                android:background="@color/orange"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_width="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_height="50dp" />
+            <Button
+                android:id="@+id/btn_bookRide"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="BOOK RIDE"
+                android:background="@drawable/textview_bg_green"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_top_headrer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:src="@drawable/menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Ride Details"
+                android:textSize="20sp"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/bell_xxhdpi" />
+        </RelativeLayout>
+       </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_menu"
+        android:layout_width="250dp"
+        android:background="@color/gray"
+        android:layout_gravity="start"
+        android:layout_height="fill_parent">
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:scrollbars="none"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rel_profile_container"
+                    android:layout_width="fill_parent"
+                    android:background="@color/orange"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="90dp"
+                        android:src="@drawable/image"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_height="90dp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:text="Brunch Hadyan"
+                        android:layout_below="@+id/img_profile"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="15dp"
+                        android:textSize="18sp"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/img_edit"
+                        android:visibility="gone"
+                        android:src="@drawable/edit_profile"
+                        android:layout_alignParentRight="true"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/rel_profile_container"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:visibility="gone"
+                        android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ACCOUNT"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="20dp"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/menu_orange"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_centerVertical="true"
+                            android:visibility="invisible"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:text="Find A Ride"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/white"
+                        android:gravity="center_vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/tv_find_ride" />
+
+                    <TextView
+                        android:id="@+id/tv_offer_ride"
+                        android:text="Offer A Ride"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="Search A Ride"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:text="Feed Back"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/tv_contactus"
+                        android:text="Contact Us"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/tv_about_us"
+                        android:text="About Us"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/tv_careers"
+                        android:text="Careers"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/tv_why_vroomcar"
+                        android:text="Why VroomCar?"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_terms_and_conditions"
+                        android:text="@string/terms"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:visibility="gone"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/share_us"
+                        android:text="Share Us On"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:id="@+id/tv_Logout"
+                        android:text="Logout"
+                        android:textSize="17sp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_vertical"
+                        android:layout_height="50dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="50dp"
+            android:visibility="gone"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
